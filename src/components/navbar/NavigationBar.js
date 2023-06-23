@@ -29,7 +29,7 @@ function NavigationBar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-brown">
       <div className="container-fluid">
-        <NavLink className="navbar-brand" to="/">
+        <NavLink className="navbar-brand" to="/user-profile">
           Logo
         </NavLink>
         <button
@@ -56,7 +56,7 @@ function NavigationBar() {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
+            {!userLoginStatus && (<li className="nav-item">
               <NavLink
                 className="nav-link"
                 to="/register"
@@ -67,6 +67,7 @@ function NavigationBar() {
                 Register
               </NavLink>
             </li>
+            )}
 
             {!userLoginStatus ? (
               <li className="nav-item">

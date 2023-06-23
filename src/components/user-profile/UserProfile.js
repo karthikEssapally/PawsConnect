@@ -16,7 +16,9 @@ console.log(currentUser)
 
     //get token from local storage
     let token=localStorage.getItem("token")
-
+    if (!userLoginStatus) {
+      logoutUser(); // Call the logoutUser function here
+    }
     axios
       .get("http://localhost:4000/user-api/test",{headers:{"Authorization":"Bearer "+token}})
       .then((response) => {
