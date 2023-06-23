@@ -30,7 +30,7 @@ function NavigationBar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-brown">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/user-profile">
-          Logo
+        PeTLov..
         </NavLink>
         <button
           className="navbar-toggler"
