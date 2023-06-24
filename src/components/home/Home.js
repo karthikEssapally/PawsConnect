@@ -1,58 +1,52 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Home.css";
-import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { loginContext } from "../../contexts/loginContext";
-import { useHistory } from "react-router-dom";
+import axios from "axios";
 
 function Home() {
-  const [currentUser, error, userLoginStatus, loginUser, logoutUser] =
-    useContext(loginContext);
+  const [currentUser, error, userLoginStatus, loginUser, logoutUser] = useContext(loginContext);
   const [show, setShow] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
-  const history = useHistory();
 
   const handleFileSelect = (e) => {
     setSelectedFile(e.target.files[0]);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Perform the upload logic here
     if (selectedFile) {
-      console.log("Selected file:", selectedFile);
-      // Handle the file upload
-      // You can use axios or fetch to send the file to the server
-    }
-    setShow(false);
-  };
+      try {
+        const formData = new FormData();
+        formData.append("post", selectedFile);
 
-  const handleAddPhotos = () => {
-    if (userLoginStatus) {
-      setShow(true);
-    } else {
-      history.push("/login");
+        // Make a POST request to the backend API to create a new post
+        await axios.post("/posts", formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        });
+
+        // Reset the form and close the modal
+        setSelectedFile(null);
+        setShow(false);
+      } catch (error) {
+        console.error("Error creating post:", error);
+      }
     }
   };
 
   return (
     <>
-      <Button variant="primary" onClick={handleAddPhotos}>
+      <Button variant="primary" onClick={() => setShow(true)}>
         Add Photos
       </Button>
 
-      <Modal
-        show={show}
-        onHide={() => setShow(false)}
-        dialogClassName="modal-90w"
-        aria-labelledby="example-custom-modal-styling-title"
-      >
+      <Modal show={show} onHide={() => setShow(false)} dialogClassName="modal-90w">
         <Modal.Header closeButton>
-          <Modal.Title id="example-custom-modal-styling-title">
-            Add Photos
-          </Modal.Title>
+          <Modal.Title>Add Photos</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
@@ -69,3 +63,4 @@ function Home() {
 }
 
 export default Home;
+
