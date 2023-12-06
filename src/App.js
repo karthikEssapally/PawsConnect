@@ -9,6 +9,9 @@ import Aboutus from './components/aboutus/Aboutus'
 import UserProfile from './components/user-profile/UserProfile';
 import Products from './components/products/Products';
 import Cart from './components/cart/Cart'
+import Topbar from './components/topbar/Topbar';
+import TreatmentDetails from './components/treatmentDetails/TreatmentDetails';
+import Order from './components/order/Order';
 
 function App() {
 
@@ -19,7 +22,8 @@ function App() {
       children:[
         {
           path:"/",
-          element:<Home />
+          element:<Home />,
+        
         },
         {
           path:"/register",
@@ -34,18 +38,28 @@ function App() {
           element:<Aboutus />
         },
         {
-          path:"/user-profile",
-          element:<UserProfile />,
+          path:"/products",
+          element:<Products />,
           children:[
-            {
-              path:"products",
-              element:<Products />
-            },
             {
               path:"cart",
               element:<Cart />
             }
+            
           ]
+        },
+        {
+          path:"/user-profile",
+          element:<UserProfile />,
+        },
+        {
+          path:"/order",
+          element:<Order />,
+        },
+        
+        {
+          path:"/treatmentDetails",
+          element:<TreatmentDetails />,
         }
 
       ]

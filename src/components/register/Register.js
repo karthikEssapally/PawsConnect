@@ -3,70 +3,63 @@ import "./Register.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate, NavLink } from "react-router-dom";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Register() {
-  // error state
   let [error, setError] = useState("");
   let [selectedFile, setSelectedFile] = useState(null);
-
-  // navigate
   const navigate = useNavigate();
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
-  // useForm hook
-  let {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-
-  // adding new user
-  let addNewUser = (newUser) => {
-    // make HTTP POST req to save newUser to localAPI
-
+  const addNewUser = (newUser) => {
     let fd = new FormData();
-    // append newUser to form data
     fd.append("user", JSON.stringify(newUser));
-    // append selected file to form data
     fd.append("photo", selectedFile);
-
+  
+    // Assuming you have a different endpoint for buyer registration
+    const endpoint = newUser.isSeller
+      ? "http://localhost:4000/user-api/register-seller"
+      : "http://localhost:4000/user-api/register-buyer";
+  
     axios
-      .post("http://localhost:4000/user-api/register-user", fd)
+      .post(endpoint, fd)
       .then((response) => {
         if (response.status === 201) {
-          // navigate to login component
           navigate("/login");
-        }
-        if (response.status !== 201) {
+          toast.success("User registered successfully");
+        } else {
           setError(response.data.message);
+          toast.error(response.data.message);
         }
       })
       .catch((err) => {
         if (err.response) {
-          // the client was given an error response (5xx, 4xx)
           setError(err.message);
+          toast.error(err.message);
         } else if (err.request) {
-          // the client never received a response
           setError(err.message);
+          toast.error(err.message);
         } else {
-          // for other errors
           setError(err.message);
+          toast.error(err.message);
         }
       });
   };
-
-  // on file select
   const onFileSelect = (e) => {
     setSelectedFile(e.target.files[0]);
   };
 
+ 
   const containerStyle = {
-    backgroundImage: `url("https://static.vecteezy.com/system/resources/thumbnails/010/790/383/small_2x/cute-animals-in-zoo-placards-and-banner-in-zoos-design-for-banner-layout-annual-report-web-flyer-brochure-ad-free-vector.jpg")`,
+    backgroundImage: `url("https://png.pngtree.com/background/20210715/original/pngtree-plain-white-solid-color-background-picture-image_1323736.jpg")`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "100vh",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    marginTop:"50px",
     textAlign: "center",
   };
   
@@ -100,7 +93,7 @@ function Register() {
     marginBottom: "10px",
     border: "none",
     borderRadius: "4px",
-    backgroundColor: "rgba(0, 0, 0, 0.75)",
+    backgroundColor: "#534545",
     color: "#fff",
     "::placeholder": {
       color: "#fff",
@@ -109,7 +102,7 @@ function Register() {
 
   const buttonStyle = {
     padding: "10px 20px",
-    backgroundColor: "#f58220",
+    backgroundColor: "rgb(86, 14, 14)",
     color: "#fff",
     border: "none",
     borderRadius: "4px",
@@ -126,18 +119,17 @@ function Register() {
 
   return (
     <div className="add-user" style={containerStyle}>
+        <toast />
       <div className="row" style={catContainerStyle}>
         <div className="col-11 col-sm-8 col-md-6 mx-auto" style={loginContainerStyle}>
           <form onSubmit={handleSubmit(addNewUser)}>
-            <h1 style={headingStyle}>Add New User</h1>
-            {/* form submission error */}
+            <h1 style={headingStyle}>Register</h1>
             {error.length !== 0 && (
               <p className="display-3 text-danger text-center" style={errorStyle}>
                 {error}
               </p>
             )}
-            {/* add user form */}
-            {/* username */}
+
             <div className="mb-3">
               <label htmlFor="name">Username</label>
               <input
@@ -148,14 +140,13 @@ function Register() {
                 {...register("username", { required: true })}
                 style={inputStyle}
               />
-              {/* validation errors for name */}
               {errors.username?.type === "required" && (
                 <p className="text-danger fw-bold fs-5">
                   * Username is required
                 </p>
               )}
             </div>
-            {/* password */}
+
             <div className="mb-3">
               <label htmlFor="name">Password</label>
               <input
@@ -166,14 +157,13 @@ function Register() {
                 {...register("password", { required: true })}
                 style={inputStyle}
               />
-              {/* validation errors for name */}
               {errors.password?.type === "required" && (
                 <p className="text-danger fw-bold fs-5">
                   * Password is required
                 </p>
               )}
             </div>
-            {/* email */}
+
             <div className="mb-3">
               <label htmlFor="name">Email</label>
               <input
@@ -184,12 +174,11 @@ function Register() {
                 {...register("email", { required: true })}
                 style={inputStyle}
               />
-              {/* validation errors for email */}
               {errors.email?.type === "required" && (
                 <p className="text-danger fw-bold fs-5">* Email is required</p>
               )}
             </div>
-            {/* date of birth */}
+
             <div className="mb-3">
               <label htmlFor="dob">Date of birth</label>
               <input
@@ -199,14 +188,13 @@ function Register() {
                 {...register("dob", { required: true })}
                 style={inputStyle}
               />
-              {/* validation errors for name */}
               {errors.dob?.type === "required" && (
                 <p className="text-danger fw-bold fs-5">
                   * Date of birth is required
                 </p>
               )}
             </div>
-            {/* image url */}
+
             <div className="mb-3">
               <label htmlFor="name">Select profile pic</label>
               <input
@@ -217,17 +205,27 @@ function Register() {
                 onInput={onFileSelect}
                 style={inputStyle}
               />
-              {/* validation errors for image */}
               {errors.image?.type === "required" && (
                 <p className="text-danger fw-bold fs-5">
                   * Image URL is required
                 </p>
               )}
             </div>
-            {/* submit button */}
+
+            {/* Additional input for distinguishing between buyer and seller */}
+            <div className="mb-3">
+              <label htmlFor="isSeller">Register as Seller</label>
+              <input
+                type="checkbox"
+                id="isSeller"
+                {...register("isSeller")}
+              />
+            </div>
+
             <button type="submit" className="btn btn-primary" style={buttonStyle}>
               Register
             </button>
+
             <p>
               Already have an account? Sign in →{" "}
               <NavLink to="/login">Login.</NavLink>

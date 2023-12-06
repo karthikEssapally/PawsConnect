@@ -1,0 +1,13 @@
+/* Add this CSS in your styles.css or App.css file */
+.product-item a.btn {
+    background-color: rgb(86, 14, 14) !important;
+    border: none;
+  }
+/* Add this CSS in your styles.css or App.css file */
+.product-item h5 {
+    background-color: rgb(86, 14, 14) !important;
+    color: #fff; /* Set text color to white or any other color that suits your design */
+    padding: 5px; /* Add padding for better visibility */
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  }
+    

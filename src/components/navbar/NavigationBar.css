@@ -1,4 +1,84 @@
 .bg-brown {
-    background-color: rgb(86, 14, 14);
-  }
+  background-color: rgb(86, 14, 14);
+}
+.navbar-brand:hover {
+  transform: scale(1.2); /* Increase the size of the element by 10% */
+}
+.nav-item:hover {
+  transform: scale(1.2); /* Increase the size of the element by 10% */
+}
+
+/* styles.css */
+.circular-container {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  overflow: hidden; /* Ensures content inside the container stays within the border-radius */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Home.css */
+
+/* Navbar styles */
+.navbar {
   
+  position: fixed;
+  top: 0;
+  margin-bottom: 20px;
+  width: 100%;
+  z-index: 9990;
+  transition: top 0.3s ease; /* Add transition for smooth movement */
+}
+
+.navbar .app-name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+}
+
+/* Content styles */
+.content {
+  padding-top: 60px; /* Adjust the padding to accommodate the height of the navbar */
+  transition: padding-top 0.3s ease; /* Add transition for smooth movement */
+}
+
+
+
+/* //to move petlove  */
+
+/* 
+@keyframes moveLetters {
+  50% {
+    transform: translateX(0);
+  }`
+  100% {
+    transform: translateX(10px);
+  }
+} 
+ .app-name {
+  position: relative;
+}
+
+.app-name span {
+  display: inline-block;
+  animation: moveLetters 3s infinite alternate;
+}
+
+@keyframes moveLetters {
+  0% {
+    transform: translateY(0px);
+  }
+ 0% {
+    transform: translateY(0.5px);
+  }
+  40% {
+    transform: translateY(60);
+  }
+}  */
+.app-name {
+  font-size: 2rem;
+} 
+

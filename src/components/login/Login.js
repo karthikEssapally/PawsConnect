@@ -20,7 +20,7 @@ function Login() {
 
   useEffect(() => {
     if (userLoginStatus === true) {
-      navigate('/user-profile');
+      navigate('/');
     }
   }, [userLoginStatus]);
 
@@ -88,10 +88,12 @@ function Login() {
   return (
     <div className="login-container" style={containerStyle}>
       {/* form submission error */}
-      {error.length !== 0 && <p className="display-2 text-danger text-center" style={errorStyle}>{error}</p>}
+     
       {/* login form */}
       <div className="login-form" style={catContainerStyle}>
+
         <form onSubmit={handleSubmit(handleUserLogin)} style={loginContainerStyle}>
+        {error.length !== 0 && <p className="display-2 text-danger text-center" style={errorStyle}>{error}</p>}
           {/* username */}
           <div className="form-group">
             <label htmlFor="username" style={headingStyle}>Username</label>
@@ -124,7 +126,7 @@ function Login() {
               <p className="text-danger fw-bold fs-5">* Password is required</p>
             )}
             <p>
-              New to Petlove? <NavLink to="/register">Create an account.</NavLink>
+              New to PowsConnect? <NavLink to="/register">Create an account.</NavLink>
             </p>
           </div>
           {/* submit button */}

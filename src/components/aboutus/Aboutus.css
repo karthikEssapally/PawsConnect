@@ -1,0 +1,31 @@
+/* Aboutus.css */
+/* Styles for the button */
+button.nav-link.text-uppercase.active {
+  background-color: rgb(86, 14, 14);
+  color: #fff; /* Text color when the button is active */
+  border-color: rgb(86, 14, 14);
+}
+
+/* Styles for other content in blue color */
+.text-primary {
+  color: rgb(86, 14, 14);
+}
+
+div.border-start.border-5.border-primary {
+    border-color: rgb(86, 14, 14) !important; /* Add !important */
+  }
+
+.bg-light {
+  background-color: rgb(155, 20, 20);
+  color: #2a0f0f; /* Text color for content inside the bg-light container */
+}
+
+/* Optional: Styles for the link inside the bg-light container */
+.bg-light a {
+  color: #fff;
+}
+
+/* Additional styles for the paragraph in blue color */
+.text-body {
+  color: rgb(86, 14, 14);
+}

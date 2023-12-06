@@ -1,0 +1,62 @@
+/* OfferSection.css */
+
+.custom-offer-container {
+    position: relative;
+    background-color: #f8f9fa; /* Add your desired background color */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .custom-offer-content {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .custom-offer-image {
+    position: relative;
+  }
+  
+  .custom-img {
+    width: 100%; /* Set the width to your desired size */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  
+  .custom-content {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px; /* Adjust padding as needed */
+  }
+  
+  .custom-border {
+    border-left: 5px solid #343a40; /* Add your desired border color */
+    padding-left: 20px; /* Adjust padding as needed */
+  }
+  
+  .custom-display {
+    font-size: 2rem; /* Adjust font size as needed */
+  }
+  
+  /* OfferSection.css */
+
+  .custom-btn {
+    display: inline-block;
+    width: 120px; /* Set the width to your desired size */
+    padding: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .custom-btn-light {
+    background-color: #fff; /* Add your desired background color */
+    color: #000; /* Add your desired text color */
+  }
+  
+  .custom-btn-outline {
+    border: 1px solid #fff; /* Add your desired border color */
+  }
+  

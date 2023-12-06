@@ -1,0 +1,13 @@
+/* Topbar.css */
+.topbar-container {
+    background-color: white;
+    padding: 10px; /* Adjust padding to increase thickness */
+    /* Add a subtle shadow for depth */
+    width: 100%; /* Ensure the container occupies 100% width */
+  }
+  
+/* Topbar.css */
+
+.icon-color {
+  fill: rgb(86, 14, 14); /* Use 'fill' property for SVG icons */
+}

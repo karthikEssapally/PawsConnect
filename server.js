@@ -15,14 +15,14 @@ app.use(exp.static(path.join(__dirname,'./build')))
 //Get mongo client
 const mclient=require("mongodb").MongoClient;
 
-//connect to MongoDB server
+//connect to MongoDB servers
 mclient.connect('mongodb://127.0.0.1:27017')
 .then(dbRef=>{
   //get database obj
   let dbObj=dbRef.db('demodb')
   //create collection objects
-  let userCollection=dbObj.collection("userscollection")
-  let productCollection=dbObj.collection("productscollection")
+  let userCollection=dbObj.collection("userCollection")
+  let productCollection=dbObj.collection("productCollection")
 
   //share collections objects to APIs
   app.set("userCollection",userCollection)

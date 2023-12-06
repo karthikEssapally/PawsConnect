@@ -1,0 +1,10 @@
+/* Services.css */
+
+.icon-color {
+    color: rgb(86, 14, 14);
+  }
+  .service-item {
+    background-color: #171212; /* Lighter background color */
+    border: 2px solid #272121; /* Thicker white border */
+    padding: 20px; /* Adjusted padding for more space inside the item */
+  }

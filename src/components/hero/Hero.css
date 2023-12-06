@@ -1,0 +1,13 @@
+.hero-container {
+    padding-top: 60px; /* Adjust as needed for spacing between topbar and hero */
+    position: relative;
+    margin-top: -100px;
+    z-index: 2; /* Ensure hero section appears above topbar */
+  }
+  
+  @media (min-width: 992px) {
+    .hero-container {
+      padding-top: 100px; /* Adjust as needed for larger screens */
+    }
+  }
+  

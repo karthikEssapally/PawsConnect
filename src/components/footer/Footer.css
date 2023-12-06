@@ -1,6 +1,21 @@
-footer {
-  padding: 50px;
-  text-align: center;
-  background-color: rgb(57, 55, 55);
-  color: azure;
+.container-fluid.custom-bg {
+  background-color: #f5f0f0; /* Replace with your preferred background color */
+  min-height: 50vh; /* Make sure the container takes at least 100% of the viewport height */
+}
+.icon-color {
+  color: rgb(86, 14, 14);
+}
+.mt-5 {
+  margin-top: 3rem; /* Adjust the top margin as needed */
+}
+
+.py-5 {
+  padding-top: 3rem; /* Adjust the top padding as needed */
+  padding-bottom: 3rem; /* Adjust the bottom padding as needed */
+}
+h5.border-start.border-5.border-primary {
+    border-color: rgb(86, 14, 14) !important; /* Add !important *//* Change this to your desired color */
+}
+.text-body{
+  text-decoration: none;
 }
