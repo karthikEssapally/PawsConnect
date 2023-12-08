@@ -5,6 +5,20 @@ import { loginContext } from "../../contexts/loginContext";
 import { useNavigate } from "react-router-dom";
 
 function Cart() {
+  useEffect(() => {
+    const loadRazorpayScript = async () => {
+      const script = document.createElement('script');
+      script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+      script.async = true;
+      document.head.appendChild(script);
+
+      script.onload = () => {
+        console.log('Razorpay script loaded');
+      };
+    };
+
+    loadRazorpayScript();
+  }, []); 
   const [currentUser, error, userLoginStatus, loginUser, logoutUser] = useContext(loginContext);
   const [cartItems, setCartItems] = useState([]);
   const navigate = useNavigate();
@@ -47,6 +61,7 @@ function Cart() {
     {cartItems.map((item, index) => (
       <li key={index}>{item}</li>
     ))}
+    <button onClick={()=>{}}>BUY NOW</button>
   </ul>
 ) : (
   <p>No items in the cart.</p>
