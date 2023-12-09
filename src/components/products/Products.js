@@ -54,6 +54,7 @@ function Products() {
       });
   }, []);
   const placeOrder = (product)=>{
+    console.log(product);
     navigate("/Order");
   }
 
@@ -149,7 +150,7 @@ function Products() {
       }, 5000);
     })
     .catch((error) => {
-      // ... (your error handling)
+      // ...(your error handling)
 
       // Display error message using toast
       toast.error("Post Request Failed ");
@@ -285,7 +286,7 @@ return (
           Add Cart
         </button>
         {/* New button for placing an order */}
-        <button className="product-button" onClick={() => placeOrder(product)}>
+        <button className="product-button" onClick={() => placeOrder(product.username)}>
           Order
         </button>
         </div>
