@@ -213,6 +213,12 @@
   border-color: #590d0d;
   transform: scale(1.1);
 }
+.closeSearch{
+  background-color: #590d0d;
+  border-color: #590d0d;
+  color: white;
+}
+
 @media (max-width: 768px) { /* Adjust the breakpoint as per your preference */
   .with-sidebar {
     flex-direction: row;

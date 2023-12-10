@@ -131,7 +131,7 @@ function Products() {
     const token = localStorage.getItem("token");
     if (!userLoginStatus) {
       logoutUser();
-      navigate("/login");
+      navigate("/products");
     }
 
     axios
@@ -153,7 +153,7 @@ function Products() {
       // ...(your error handling)
 
       // Display error message using toast
-      toast.error("Post Request Failed ");
+      toast.error("Request Failed Please Login ");
     });
 
 return (
@@ -217,9 +217,10 @@ return (
         <img src={user.image} alt={user.username} />
       </div>
     ) : (
-      <p>No results found.</p>
+      <p>No results found.....</p>
     )}
-    <Button variant="secondary" onClick={handleCloseSearch}>
+    <Button variant="primary" className="search-button"
+     onClick={handleCloseSearch}>
       Close Search
     </Button>
   </>
@@ -250,10 +251,10 @@ return (
                   <input type="file" accept="image/*" onChange={(e) => setPostImage(e.target.files[0])} />
                 </Modal.Body>
                 <Modal.Footer>
-                  <Button variant="secondary" onClick={closeModal}>
+                  <Button className="search-button" onClick={closeModal}>
                     Close
                   </Button>
-                  <Button variant="primary" onClick={handlePostSubmit}>
+                  <Button className="search-button" onClick={handlePostSubmit}>
                     Submit Post
                   </Button>
                 </Modal.Footer>

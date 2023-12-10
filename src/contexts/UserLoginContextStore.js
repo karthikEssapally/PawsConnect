@@ -33,7 +33,7 @@ function UserLoginContextStore({children}) {
 
     
     //userlogout
-    
+    const logoutUser=()=>{
         //clear local or session storage
         localStorage.clear();
          //update user login status
