@@ -1,3 +1,42 @@
-.order{
-    margin-top: 100px;
+/* Order.css */
+
+.order {
+  margin-top: 300px;
+}
+
+.container {
+  margin-top: 50px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container1 {
+  margin-top: 70px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Additional Styles */
+
+.container h1 {
+  color: #333; /* Change text color */
+}
+
+.container form {
+  /* Add styles for the form */
+}
+
+.container input,
+.container textarea {
+  width: 100%; /* Make input fields and textareas full-width */
+  margin-bottom: 15px; /* Add space between form elements */
+}
+
+.container img {
+  width: 100%; /* Make the image fill its container */
+  border-radius: 8px; /* Add border-radius to the image */
 }

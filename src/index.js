@@ -5,13 +5,16 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import UserLoginContextStore from "./contexts/UserLoginContextStore";
+import OrderContextprovider from "./contexts/OrderContextprovider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    {/* <OrderContextprovider> */}
     <UserLoginContextStore>
       <App />
     </UserLoginContextStore>
+    {/* </OrderContextprovider>  */}
   </React.StrictMode>
 );
 

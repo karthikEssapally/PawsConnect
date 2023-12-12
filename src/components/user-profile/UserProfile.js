@@ -48,7 +48,9 @@ function UserProfile() {
   const handleClose = () => {
     setShowModal(false); // Close the modal when the user clicks the close button
   };
-
+  // const intervalId = setInterval(() => {
+  //   let  fetchUserData();
+  // }, 10000);
   return (
     <div className="text-center">
       {currentUser && (
@@ -65,7 +67,7 @@ function UserProfile() {
           <button className="btn btn-danger my-4" onClick={handleEdit}>
             Edit profile
           </button>
-
+          {/* fetchUserData( */}
           <div className="container border py-3">
             <h2>Posts:</h2>
             <div className="row">
