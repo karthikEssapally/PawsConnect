@@ -1,0 +1,36 @@
+.pet-grooming-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+  }
+  .pet-grooming-container{
+    margin-top: 100px;
+  }
+  .pet-grooming-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+  }
+  
+  .pet-grooming-content {
+    flex: 1;
+  }
+  
+  .pet-grooming-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .pet-grooming-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  

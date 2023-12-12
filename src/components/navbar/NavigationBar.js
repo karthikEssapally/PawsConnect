@@ -120,16 +120,19 @@ function NavigationBar() {
               </li>
             ) : (
               <li className="nav-item">
-                <NavLink
+              <NavLink
                   className="nav-link"
                   to="/login"
-                  style={({ isActive }) => {
-                    return isActive ? activeLink : inactiveLink;
-                  }}
-                  onClick={logoutUser}
-                >
-                  Logout
-                </NavLink>
+                style={({ isActive }) => {
+                   return isActive ? activeLink : inactiveLink;
+              }}
+              onClick={() => {
+              logoutUser();
+               window.location.reload(); // Reload the entire page
+             }}
+>
+  Logout
+</NavLink>
               </li>
             )}
 

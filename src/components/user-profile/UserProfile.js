@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import "./UserProfile.css";
 import { loginContext } from "../../contexts/loginContext";
 import axios from "axios";
+import { useEffect } from "react";
 
 function UserProfile() {
   const [currentUser, error, userLoginStatus, loginUser, logoutUser] =
@@ -15,7 +16,10 @@ function UserProfile() {
     dob: currentUser.dob,
     image: currentUser.image
   });
-
+  
+  useEffect(() => {
+    
+  }, [currentUser]);
   const handleChange = (e) => {
     setUpdatedUserData({
       ...updatedUserData,
@@ -27,6 +31,10 @@ function UserProfile() {
     try {
       const response = await axios.put(`/api/users/${currentUser._id}`, updatedUserData);
       console.log(response.data); // Assuming the server responds with the updated user data
+      
+      // Update the context or state with the new user data
+      loginUser(response.data); // Assuming loginUser is a function to update the user in the loginContext
+      
       setShowModal(false); // Close the modal after updating
     } catch (error) {
       console.error(error);
@@ -112,17 +120,6 @@ function UserProfile() {
                     type="date"
                     name="dob"
                     value={updatedUserData.dob}
-                    onChange={handleChange}
-                    className="form-control"
-                  />
-                </div>
-
-                <div>
-                  <label>Image URL:</label>
-                  <input
-                    type="text"
-                    name="image"
-                    value={updatedUserData.image}
                     onChange={handleChange}
                     className="form-control"
                   />

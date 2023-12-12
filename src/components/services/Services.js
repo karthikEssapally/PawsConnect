@@ -26,7 +26,7 @@ function Services() {
               <div>
                 <h5 className="text-uppercase mb-3">Pet Boarding</h5>
                 <p>Experience top-notch pet care services with a team of dedicated professionals. Your pet's comfort is our priority, providing a safe and loving environment.</p>
-                <a className="text-primary text-uppercase" href="#">
+                <a className="text-primary text-uppercase" href="/petBoarding">
                   Read More<BiChevronRight />
                 </a>
               </div>
@@ -38,7 +38,7 @@ function Services() {
               <div>
                 <h5 className="text-uppercase mb-3">Pet Feeding</h5>
                 <p>Ensure your pets receive nutritious meals tailored to their needs. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a className="text-primary text-uppercase" href="#">
+                <a className="text-primary text-uppercase" href="/petFeeding">
                   Read More<BiChevronRight />
                 </a>
               </div>
@@ -50,7 +50,7 @@ function Services() {
               <div>
                 <h5 className="text-uppercase mb-3">Pet Grooming</h5>
                 <p>Enhance your pet's well-being with our expert grooming services. Our skilled team provides top-notch care, ensuring your furry friend feels and looks their best.</p>
-                <a className="text-primary text-uppercase" href="#">
+                <a className="text-primary text-uppercase" href="/petGrooming">
                   Read More<BiChevronRight />
                 </a>
               </div>
@@ -62,7 +62,7 @@ function Services() {
               <div>
                 <h5 className="text-uppercase mb-3">Pet Training</h5>
                 <p>Enhance your pet's behavior and skills with our expert training services. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a className="text-primary text-uppercase" href="#">
+                <a className="text-primary text-uppercase" href="/petTraining">
                   Read More<BiChevronRight />
                 </a>
               </div>
@@ -74,7 +74,7 @@ function Services() {
               <div>
                 <h5 className="text-uppercase mb-3">Pet Exercise</h5>
                 <p>Engage your furry friend with stimulating activities. Whether it's a playful game of fetch or a refreshing walk, keeping your pet active is essential for their well-being.</p>
-                <a className="text-primary text-uppercase" href="#">
+                <a className="text-primary text-uppercase" href="/petExerciseGrid">
                   Read More<BiChevronRight />
                 </a>
               </div>

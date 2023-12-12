@@ -1,0 +1,35 @@
+/* PetBoarding.css */
+
+.pet-boarding-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .pet-boarding-container{
+    margin-top: 200px;
+  }
+  
+  .pet-boarding-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .pet-boarding-content {
+    padding: 20px;
+  }
+  
+  .pet-boarding-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .pet-boarding-content p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  

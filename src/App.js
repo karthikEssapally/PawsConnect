@@ -12,7 +12,11 @@ import Cart from './components/cart/Cart'
 import Topbar from './components/topbar/Topbar';
 import TreatmentDetails from './components/treatmentDetails/TreatmentDetails';
 import Order from './components/order/Order';
-
+import PetExerciseGrid from './components/petExerciseGrid/PetExerciseGrid';
+import PetTraining from './components/petTraining/PetTraining';
+import PetGrooming from './components/petGrooming/PetGrooming';
+import PetFeeding from './components/petFeeding/PetFeeding';
+import PetBoarding from './components/petBoarding/PetBoarding';
 function App() {
 
   const browserRouter=createBrowserRouter([
@@ -22,8 +26,31 @@ function App() {
       children:[
         {
           path:"/",
-          element:<Home />,
-        
+          element:<Home />
+        },
+        {
+          path:"/treatmentDetails",
+          element:<TreatmentDetails />,
+        },
+        {
+          path:"/petBoarding",
+          element:<PetBoarding />,
+        },
+        {
+          path:"/petFeeding",
+          element:<PetFeeding />,
+        },
+        {
+          path:"/petGrooming",
+          element:<PetGrooming />,
+        },
+        {
+          path:"/petExerciseGrid",
+          element:<PetExerciseGrid />,
+        },
+        {
+          path:"/petTraining",
+          element:<PetTraining />,
         },
         {
           path:"/register",
@@ -55,13 +82,7 @@ function App() {
         {
           path:"/order",
           element:<Order />,
-        },
-        
-        {
-          path:"/treatmentDetails",
-          element:<TreatmentDetails />,
         }
-
       ]
     }
   ])

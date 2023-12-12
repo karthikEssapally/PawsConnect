@@ -38,7 +38,7 @@ const Hero = () => {
                   Explore our diverse range of breeds, each carefully selected for their unique qualities. Whether you're looking for a playful puppy, a loyal guardian, or a cuddly companion, we have the perfect match for every family and lifestyle.
                 </p>
                 <div className="d-flex align-items-center justify-content-center justify-content-lg-start pt-4">
-                  <a href="/shop" className="btn btn-outline-light border-2 py-md-3 px-md-4 me-4" style={{ fontSize: "1rem" }}>
+                  <a href="/products" className="btn btn-outline-light border-2 py-md-3 px-md-4 me-4" style={{ fontSize: "1rem" }}>
                     Browse Our Dogs
                   </a>
                   <button type="button" className="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
