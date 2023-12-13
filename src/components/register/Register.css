@@ -1,3 +1,94 @@
-.add-user{
-    z-index: 0;
+/* RegisterStyles.css */
+
+.containerStyle {
+    background-image: url("https://png.pngtree.com/background/20210715/original/pngtree-plain-white-solid-color-background-picture-image_1323736.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 500px;
+    text-align: center;
+}
+
+.catContainerStyle {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.loginContainerStyle {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.headingStyle {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 28px;
+}
+
+.inputStyle {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #534545;
+    color: #fff;
+    ::placeholder {
+        color: #fff;
+    }
+}
+
+.buttonStyle {
+    padding: 12px 24px;
+    background-color: rgb(86, 14, 14);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.buttonStyle:hover {
+    background-color: #a01818;
+}
+
+.errorStyle {
+    font-size: 14px;
+    color: red;
+    margin-top: 10px;
+}
+
+.checkboxStyle {
+    margin-bottom: 16px;
+}
+
+/* Additional styling for form links */
+form p {
+    margin-top: 16px;
+    font-size: 14px;
+    color: #333;
+}
+
+form a {
+    color: #a01818;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+form a:hover {
+    text-decoration: underline;
 }

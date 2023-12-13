@@ -288,7 +288,7 @@ return (
         </button>
         {/* New button for placing an order */}
         <button className="product-button" onClick={() => placeOrder(product.username)}>
-          Order
+          Buy Now
         </button>
         </div>
     ))

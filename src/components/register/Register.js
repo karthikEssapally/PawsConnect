@@ -50,72 +50,74 @@ function Register() {
     setSelectedFile(e.target.files[0]);
   };
 
- 
-  const containerStyle = {
-    backgroundImage: `url("https://png.pngtree.com/background/20210715/original/pngtree-plain-white-solid-color-background-picture-image_1323736.jpg")`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    height: "100vh",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginTop:"50px",
-    textAlign: "center",
-  };
+ const containerStyle = {
+  backgroundImage: `url("https://png.pngtree.com/background/20210715/original/pngtree-plain-white-solid-color-background-picture-image_1323736.jpg")`,
+  backgroundSize: "cover",
+  backgroundPosition: "center",
+  height: "100vh",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginTop: "250px",
+  textAlign: "center",
+};
+
+const catContainerStyle = {
+  position: "relative",
+  width: "100%",
+  maxWidth: "400px", // Adjusted max-width for a cleaner look
+  margin: "0 auto",
+};
+
+const loginContainerStyle = {
+  position: "absolute",
+  top: "10%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  padding: "24px", // Increased padding for a more comfortable layout
+  borderRadius: "8px", // Increased border-radius for a rounded appearance
+  width: "100%",
+  maxWidth: "400px",
+  backgroundColor: "rgba(255, 255, 255, 0.9)",
+  boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
+};
+
+const headingStyle = {
+  marginBottom: "20px",
+  color: "#333",
+  fontSize: "28px", // Slightly reduced font size for better balance
+};
+
+const inputStyle = {
+  width: "100%",
+  padding: "12px", // Increased padding for better input spacing
+  marginBottom: "16px", // Increased margin for better input separation
+  border: "none",
+  borderRadius: "8px",
+  backgroundColor: "#534545",
+  color: "#fff",
+  "::placeholder": {
+    color: "#fff",
+  },
+};
+
+const buttonStyle = {
+  padding: "12px 24px",
+  backgroundColor: "rgb(86, 14, 14)",
+  color: "#fff",
+  border: "none",
+  borderRadius: "8px",
+  cursor: "pointer",
+  fontWeight: "bold",
+  transition: "background-color 0.3s ease",
+};
+
+const errorStyle = {
+  fontSize: "14px",
+  color: "red",
+  marginTop: "10px",
+};
   
-  const catContainerStyle = {
-    position: "relative",
-    width: "100%",
-    maxWidth: "600px",
-    margin: "0 auto",
-  };
-
-  const loginContainerStyle = {
-    position: "absolute",
-    top: "10%",
-    left: "50%",
-    transform: "translate(-44%, -56%)",
-    padding: "20px",
-    borderRadius: "4px",
-    width: "100%",
-    maxWidth: "300px",
-  };
-
-  const headingStyle = {
-    marginBottom: "20px",
-    color: "#333",
-    fontSize: "34px",
-  };
-
-  const inputStyle = {
-    width: "100%",
-    padding: "10px",
-    marginBottom: "10px",
-    border: "none",
-    borderRadius: "4px",
-    backgroundColor: "#534545",
-    color: "#fff",
-    "::placeholder": {
-      color: "#fff",
-    },
-  };
-
-  const buttonStyle = {
-    padding: "10px 20px",
-    backgroundColor: "rgb(86, 14, 14)",
-    color: "#fff",
-    border: "none",
-    borderRadius: "4px",
-    cursor: "pointer",
-    fontWeight: "bold",
-    transition: "background-color 0.3s ease",
-  };
-
-  const errorStyle = {
-    fontSize: "14px",
-    color: "red",
-    marginTop: "10px",
-  };
 
   return (
     <div className="add-user" style={containerStyle}>

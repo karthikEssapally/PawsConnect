@@ -1,14 +1,11 @@
 .product-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Center the products horizontally */
-  align-items: center; /* Center the products vertically */
-}
-.product-container {
   margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* Adjust the value to set the desired column gap */
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .product {
@@ -18,6 +15,8 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f3f3;
+  box-sizing: border-box;
+  max-height: 500px;
 }
 
 .product h2 {
@@ -38,16 +37,19 @@
 
 .product-image {
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
+  max-height: 150px;
   height: auto;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .cart {
   margin-top: 20px;
 }
 
-.cart h3 {
+.cart h3,
+.selected-posts h3 {
   font-size: 16px;
   margin-bottom: 10px;
 }
@@ -57,17 +59,9 @@
   padding: 0;
 }
 
-.cart li {
+.cart li,
+.clearfix {
   margin-bottom: 5px;
-}
-
-.selected-posts {
-  margin-top: 20px;
-}
-
-.selected-posts h3 {
-  font-size: 16px;
-  margin-bottom: 10px;
 }
 
 .selected-posts img {
@@ -76,43 +70,30 @@
   margin-bottom: 10px;
 }
 
-.close-posts-button {
+.close-posts-button,
+.add-to-cart-button,
+.product-button,
+.create-post-button,
+.Cart-button,
+.search-button,
+.closeSearch {
   margin-top: 10px;
-  margin-bottom: 10PX;
+  margin-bottom: 10px;
   padding: 5px 10px;
   border: none;
   border-radius: 5px;
   background-color: rgb(86, 14, 14);
   cursor: pointer;
-  color : white;
+  color: white;
 }
-.add-to-cart-button{
-  background-color: rgb(86, 14, 14);
-  color : white;
-  border-radius: 20px;
-}
-.product-button{
-  background-color: rgb(86, 14, 14);
-  color : white;
-  border-radius: 20px;
-}
-.add-to-cart-button:hover{
+
+.add-to-cart-button:hover,
+.create-post-button:hover,
+.Cart-button:hover,
+.search-button:hover,
+.closeSearch:hover {
   transform: scale(1.1);
   background-color: #ea9292;
-}
-.clearfix {
-  clear: both;
-}
-
-/* Media query for screens with a maximum width of 768px */
-@media screen and (max-width: 768px) {
-  .product {
-    width: 100%;
-  }
-
-  .product-container {
-    justify-content: center;
-  }
 }
 
 .home-container {
@@ -124,16 +105,17 @@
 .toggle-button {
   position: fixed;
   top: 8px;
-  left: 60px; /* Adjust left property as per your preference */
+  left: 60px;
   padding: 10px;
   background-color: rgba(59, 53, 53, 0.1);
   color: #fff;
   cursor: pointer;
   border-radius: 500px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 9999; /* Add this line to ensure the button appears above other elements */
+  z-index: 9999;
 }
-.toggle-button:hover{
+
+.toggle-button:hover {
   transform: scale(1.2);
 }
 
@@ -161,102 +143,45 @@
   color: red;
 }
 
-/* //button  */
-.create-post-button {
-  border-radius: 100px;
-  min-width: 70px;
-  background-color: rgb(86, 14, 14);
-  border-color: rgb(86, 14, 14);
-}
-
-.create-post-button:hover {
-  transform: scale(1.1);
-  background-color: #ea9292;
-  border-color: #590d0d;
-}
-
-/* //cart  */
-.Cart-button {
-  min-width: 70px;
-  border-radius: 100px;
-  background-color: rgb(86, 14, 14);
-  border-color: rgb(86, 14, 14);
-}
-
-.Cart-button:hover {
-  transform: scale(1.1);
-  background-color: #ea9292;
-  border-color: #590d0d;
-  
-}
 .search-input {
-  width: 300px; /* Set the desired width of the search input */
-  height: 40px; /* Set the desired height of the search input */
+  width: 300px;
+  height: 40px;
   border-color: #590d0d;
 }
 
-
-/* search */
 .user-profile img {
   max-width: 200px;
   max-height: 200px;
   width: auto;
   height: auto;
 }
-.search-button {
-  background-color: #590d0d;
-  border-color: #590d0d;
-  color: white; /* Set the text color to ensure it's visible */
-}
-.search-button:hover{
-  background-color: #ea9292;
-  border-color: #590d0d;
-  transform: scale(1.1);
-}
-.closeSearch{
-  background-color: #590d0d;
-  border-color: #590d0d;
-  color: white;
-}
 
-@media (max-width: 768px) { /* Adjust the breakpoint as per your preference */
+@media screen and (max-width: 768px) {
+  .product {
+    width: 100%;
+  }
+
+  .product-container {
+    justify-content: center;
+  }
+
   .with-sidebar {
     flex-direction: row;
   }
 
   .with-sidebar .sidebar {
     width: 100%;
-    order: 0; /* Change the order to move the sidebar below the main content */
+    order: 0;
   }
 
   .with-sidebar .main-content {
-    order: 100; /* Change the order to move the main content above the sidebar */
+    order: 100;
   }
 }
-.post-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
 
-.post-container {
-  width: calc(33.33% - 10px); /* Adjust the width and margin as needed */
-  margin-bottom: 20px; /* Adjust the margin as needed */
-}
-
-.post-image {
-  width: 500px;
-  height: 500px;
-  object-fit: cover; /* Preserve aspect ratio and cover the container */
-}
-
- body {
-  background: linear-gradient(to bottom, #f7f7f7, #e0e0e0);
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-} 
-
+.post-grid,
 .selected-posts {
+  margin-top: 20px;
   background: #ffffff;
   padding: 20px;
   border-radius: 10px;
@@ -279,7 +204,8 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
-
+body {
+  background: linear-gradient(to bottom, #f7f7f7, #e0e0e0);
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
