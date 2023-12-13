@@ -7,7 +7,7 @@ import './Order.css';
 const Order = () => {
   return (
     <div className="container1">
-      <div className="container">
+      <div className="container2">
         <div className="row">
           <div className="col-5">
             <h1 className="mb-5">Contact Us</h1>
