@@ -26,7 +26,7 @@ function Register() {
       .post(endpoint, fd)
       .then((response) => {
         if (response.status === 201) {
-          navigate("/login");
+          navigate("/Products");
           toast.success("User registered successfully");
         } else {
           setError(response.data.message);

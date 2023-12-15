@@ -21,8 +21,8 @@ const ProductCarousel = () => {
               <h6 className="text-uppercase">Quality Pet Foods</h6>
               <h5 className="text mb-0">$199.00</h5>
               <div className="btn-action d-flex justify-content-center">
-                <a className="btn btn py-2 px-3" href="" style={iconStyle}><FaShoppingCart size={20} /></a>
-                <a className="btn btn py-2 px-3" href="" style={iconStyle}><FaEye size={20} /></a>
+                <a className="btn btn py-2 px-3" href="/Products" style={iconStyle}><FaShoppingCart size={20} /></a>
+                <a className="btn btn py-2 px-3" href="/Products" style={iconStyle}><FaEye size={20} /></a>
               </div>
             </div>
           </div>
@@ -34,8 +34,8 @@ const ProductCarousel = () => {
               <h6 className="text-uppercase">Quality Pet Foods</h6>
               <h5 className="text mb-0">$199.00</h5>
               <div className="btn-action d-flex justify-content-center">
-                <a className="btn btn py-2 px-3" href="" style={iconStyle}><FaShoppingCart size={20} /></a>
-                <a className="btn btn py-2 px-3" href="" style={iconStyle}><FaEye size={20} /></a>
+                <a className="btn btn py-2 px-3" href="/Products" style={iconStyle}><FaShoppingCart size={20} /></a>
+                <a className="btn btn py-2 px-3" href="/Products" style={iconStyle}><FaEye size={20} /></a>
               </div>
             </div>
           </div>
@@ -47,8 +47,8 @@ const ProductCarousel = () => {
               <h6 className="text-uppercase">Quality Pet Foods</h6>
               <h5 className="text mb-0">$199.00</h5>
               <div className="btn-action d-flex justify-content-center">
-                <a className="btn btn py-2 px-3" href="" style={iconStyle}><FaShoppingCart size={20} /></a>
-                <a className="btn btn py-2 px-3" href="" style={iconStyle}><FaEye size={20} /></a>
+                <a className="btn btn py-2 px-3" href="/Products" style={iconStyle}><FaShoppingCart size={20} /></a>
+                <a className="btn btn py-2 px-3" href="/Products" style={iconStyle}><FaEye size={20} /></a>
               </div>
             </div>
           </div>
@@ -60,8 +60,8 @@ const ProductCarousel = () => {
               <h6 className="text-uppercase">Quality Pet Foods</h6>
               <h5 className="text mb-0">$199.00</h5>
               <div className="btn-action d-flex justify-content-center">
-                <a className="btn btn py-2 px-3" href="" style={iconStyle}><FaShoppingCart size={20} /></a>
-                <a className="btn btn py-2 px-3" href="" style={iconStyle}><FaEye size={20} /></a>
+                <a className="btn btn py-2 px-3" href="/Products" style={iconStyle}><FaShoppingCart size={20} /></a>
+                <a className="btn btn py-2 px-3" href="/Products" style={iconStyle}><FaEye size={20} /></a>
               </div>
             </div>
           </div>
