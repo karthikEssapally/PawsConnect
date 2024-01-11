@@ -1,6 +1,16 @@
 import React from "react";
 import './PetGrooming.css';
 const PetGrooming = () => {
+  const contentStyle = {
+    textAlign: 'left',
+    maxWidth: '800px',
+  };
+
+  const formStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    marginTop: '15px',
+  };
   return (
     <div className="pet-grooming-container">
       <img
@@ -8,7 +18,7 @@ const PetGrooming = () => {
         alt="Pet Grooming"
         className="pet-grooming-image"
       />
-      <div className="pet-grooming-content">
+       <div style={contentStyle} className="pet-grooming-content">
         <h3>Pet Grooming Essentials</h3>
         <p>
           Regular grooming is essential for maintaining your pet's health and
@@ -60,6 +70,26 @@ const PetGrooming = () => {
           reinforcement during grooming sessions. Make it an enjoyable
           experience for both you and your furry friend.
         </p>
+          {/* Form Section (you can customize this based on your needs) */}
+          <form style={formStyle}>
+          {/* Add form fields like name, email, phone, preferred date/time, etc. */}
+          <label htmlFor="petName">Pet's Name:</label>
+          <input type="text" id="petName" name="petName" required />
+
+          <label htmlFor="ownerName">Your Name:</label>
+          <input type="text" id="ownerName" name="ownerName" required />
+
+          {/* Add more form fields as needed */}
+          
+          <label htmlFor="preferredDate">Preferred Date:</label>
+          <input type="date" id="preferredDate" name="preferredDate" required />
+
+          <label htmlFor="preferredTime">Preferred Time:</label>
+          <input type="time" id="preferredTime" name="preferredTime" required />
+
+          <button type="submit">Book Now</button>
+        </form>
+        {/* End of Form Section */}
       </div>
     </div>
   );

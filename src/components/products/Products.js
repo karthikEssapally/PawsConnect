@@ -71,7 +71,7 @@ function Products() {
       })
       .catch((error) => {
         // Display error message using toast
-        toast.error('Error adding product to cart');
+        toast.error('login for adding to cart');
         console.log(error.message);
       });
     };

@@ -38,7 +38,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-lg-3 col-md-6">
-              <h5 className="text-uppercase border-start border-5 border-primary ps-3 mb-4">Newsletter</h5>
+              <h5 className="text-uppercase border-start border-5 border-primary ps-3 mb-4">Queries</h5>
               <form action="">
                 <div className="input-group">
                   <input type="text" className="form-control p-3" placeholder="Your Email" />

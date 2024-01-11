@@ -7,7 +7,6 @@ const port=process.env.PORT||4000;
 app.listen(port, () => console.log("server listening on port 4000..."));
 
 
-
 const path=require("path")
 //connect express with react build
 app.use(exp.static(path.join(__dirname,'./build')))

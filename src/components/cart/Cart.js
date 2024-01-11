@@ -47,6 +47,9 @@ function Cart() {
     // Implement the logic to close the cart, this could be setting a state, etc.
     navigate("/products", { replace: true }); 
   };
+  const buyer =()=>{
+    navigate("/Order");
+  }
 
   return (
     <div className="cart-container">
@@ -61,7 +64,7 @@ function Cart() {
     {cartItems.map((item, index) => (
       <li key={index}>{item}</li>
     ))}
-    <button onClick={()=>{}}>BUY NOW</button>
+    <button onClick={()=>{buyer()}}>BUY NOW</button>
   </ul>
 ) : (
   <p>No items in the cart.</p>
