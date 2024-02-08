@@ -56,7 +56,7 @@ function Cart() {
       <div className="cart-header">
         <h2>Cart products</h2>
         <button className="close-cart-button" onClick={closeCart}>
-          Close Cart
+          plose Cart
         </button>
       </div>
       {cartItems?.length > 0 ? (
